@@ -19,8 +19,8 @@ let q = tress(function(url, callback){
 
         if($('#search_results > div:nth-child(2) > div.column.is-4 > h2 > a.has-text-black.is-hidden-touch').contents().eq(2).text().trim().slice(0, -1) === 'склад'){
             results.push({
-                title: $('h1').text(),
-                date: $('.b_infopost>.date').text(),
+                title: $('h2').text(),
+                date: $('#search_results > div:nth-child(1) > div.column.is-4 > h2 > a.has-text-black.is-hidden-tablet').text(),
                 href: url,
                 size: $('.newsbody').text().length
             });
